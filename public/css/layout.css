@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+	font-family: Roboto;
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap{
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -150px;
+}
+
+ /* Set the fixed height of the footer here */
+#push,
+footer {
+    height: 150px;
+}
+
+#push{ margin-bottom: 40px}
+
+footer{
+	background-color: #3BA5D3;
+	color: white;
+	box-shadow: -1px -1px 3px #545454;
+}
+
+header nav{
+	box-shadow: 1px 1px 3px #545454;
+}
+
+header nav .navbar-brand img{
+	margin:-10px -5px 0 0;
+	
+}
+
+#navbar-desktop{
+	min-height:90px;
+}
+
+#logo-desktop{
+	padding: 15px;
+}
+
+#site-title {
+  position: relative;
+  top: 18px;
+}
+
+.datos-oficina{
+	padding-top: 7px;
+	font-size: 12px;	
+	color: black !important;
+}
+
+.btn-barg{
+	background-color: #3BA5D3;
+	border: 1px solid #3BA5D3;
+	box-shadow: 1px 1px 2px #545454;
+	color: white !important;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+.btn-login{
+	font-size: 12px;
+	font-weight: 600;
+	color: black !important;
+	text-decoration: none !important;
+}
+	.btn-login img{
+		margin-right: 4px;
+	}

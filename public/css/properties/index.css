@@ -1,0 +1,62 @@
+.ribbon.prom{
+	margin-top: 55px; /* #carousel-prom{margin-top: 70px;} - 15px */
+}
+
+#carousel-prom{
+	margin: 70px auto;
+}
+
+
+#carousel-prom .checklist{
+	list-style: none;
+	color: white;
+	margin-top: 20px;
+}
+
+#carousel-prom .checklist li{
+	height:38px;
+	background: url(../../img/symbol_check.png) no-repeat left top;
+	padding: 15px 0 0 40px;
+}
+
+#carousel-prom .photo{
+	border: 4px solid white;
+	
+}
+
+#carousel-prom .rotate-10{
+	-ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+
+#carousel-prom .rotate-15{
+	-ms-transform: rotate(-15deg); /* IE 9 */
+    -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+    transform: rotate(-15deg);
+}
+
+#carousel-prom h3{
+	color:white;
+}
+
+#carousel-prom a,#carousel-prom a:focus,#carousel-prom a:hover{
+	text-transform: none;
+	text-decoration: none;
+	color:inherit;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	background:none;
+}
+
+#notfound{
+	text-align: center;
+	color: #119ED9;
+	font-weight: bold;
+}
+.casa{
+	position:absolute;
+	
+}

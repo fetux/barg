@@ -1,0 +1,46 @@
+@page {
+    margin-top: 0em;
+    margin-left: 0em;
+
+}
+
+
+.h1, h1 {
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+img.foto{
+	margin: 10px 15px; 
+	-moz-border-radius:10px; 
+    -webkit-border-radius: 10px;
+    -khtml-border-radius:10px;
+    border-radius: 10px;
+}
+
+img.foto.min{
+    max-height: 160px;
+}
+
+.qr{
+	margin: 0px 15px;
+	
+}
+
+p{
+    _margin-left:20px;
+}
+
+.precio{
+	
+	font-size:32px;
+	color:red;
+}
+
+.separador{
+	margin-top:-20px;
+	max-width:100%;
+}
+

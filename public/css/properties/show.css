@@ -1,0 +1,35 @@
+.page-header h1{
+	font-size: 2em;
+	text-shadow: 1px 1px 2px #545454;
+}
+
+.estado{
+	font-size:30px;
+}
+
+#descripcion{
+	font-size:20px;
+	margin: 30px auto;
+}
+
+.jumbotron{
+	background-color: #3BA5D3;
+	box-shadow: 1px 1px 3px #545454;
+	color: white;
+	text-shadow: 1px 1px 1px #545454;
+}
+
+.jumbotron #carousel-property{
+	box-shadow: 1px 1px 3px black;
+}
+
+#form-delete{display:inline;}
+
+#print-btn{
+	margin:20px auto 50px;
+	color: white !important;
+}
+
+.precio{
+	color: red;
+}

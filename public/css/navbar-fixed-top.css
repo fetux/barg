@@ -1,0 +1,66 @@
+body {
+  _min-height: 2000px;
+  padding-top: 120px;
+}
+
+.navbar-brand{
+	text-transform: uppercase;
+	color: #1996CC !important;
+	font-weight: bold;
+}
+
+.panel-default{
+	box-shadow: 2px 2px 10px gray;
+}
+
+.panel-default > .panel-heading{
+	background-color: #337ab7;
+	color: white;
+	height:55px;
+}
+
+.panel-body{
+	max-height:300px;
+	overflow: hidden;
+}
+
+.collage{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.collage img{
+	padding: 5px;
+	display:inline;
+}
+ 
+
+.panel-body-velo{
+	position:absolute;
+	background-color: rgba(0,0,0,0.8);
+	display:none;
+	border-radius: 0 0 2px 2px;
+	_width: 358px;
+	_height: 286px;
+	_max-width:100%;
+	z-index:9;
+}
+
+.panel-body-velo h5, .panel-body-velo p{
+	color: white;
+	
+}
+
+
+.mouse-velo-trigger{
+	position:absolute;
+	z-index:10;
+	width: 358px;
+	height: 286px;
+}
+.mas-info{z-index:11}
+
+.nav > li > a > img {
+	margin-right: 3px;
+}
