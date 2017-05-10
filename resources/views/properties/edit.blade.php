@@ -69,6 +69,12 @@
 			  @foreach ($neighborhoods as $neighborhood)
 				    <option value="{{$neighborhood->id}}" data-ciudad="{{$neighborhood->ciudad_id}}" {{ ($property->barrio_id == $neighborhood->id) ? 'selected' : '' }}>{{$neighborhood->nombre}}</option>
 			  @endforeach
+              <option value="0" data-ciudad="3">--</option>
+			  <option value="0" data-ciudad="4">--</option>
+			  <option value="0" data-ciudad="5">--</option>
+			  <option value="0" data-ciudad="6">--</option>
+			  <option value="0" data-ciudad="7">--</option>
+			  <option value="0" data-ciudad="8">--</option>
 			</select>
 
 		  </div>
