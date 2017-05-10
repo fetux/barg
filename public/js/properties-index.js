@@ -1,4 +1,4 @@
-var HOST = "http://barg.fetux.net";
+//var HOST = "http://barg.fetux.net";
 //var HOST = "http://r7000544.ferozo.com/public";
 //var HOST = "http://barg.local";
 
@@ -14,7 +14,7 @@ $.fn.cargarPropiedades = function(container,ipp,filters,page){
     filters = (filters == undefined) ? '' : '/'+filters;
     page = (page == undefined) ? '' : '?page='+page;
 
-    $.getJSON(HOST+'/properties.json'+ipp+filters+page,function(response){
+    $.getJSON('/properties.json'+ipp+filters+page,function(response){
 
 		if ($(response.data).length > 0)
 		{
@@ -38,16 +38,16 @@ $.fn.cargarPropiedades = function(container,ipp,filters,page){
 
 					switch(property.estado.nombre){
 
-						case "Reservado": ribbon.append('<img src="'+HOST+'/img/ribbon-reservado.png">'); break;
-						case "Alquilado": ribbon.append('<img src="'+HOST+'/img/ribbon-alquilado.png">'); break;
-						case "Vendido": ribbon.append('<img src="'+HOST+'/img/ribbon-vendido.png">'); break;
+						case "Reservado": ribbon.append('<img src="/img/ribbon-reservado.png">'); break;
+						case "Alquilado": ribbon.append('<img src="/img/ribbon-alquilado.png">'); break;
+						case "Vendido": ribbon.append('<img src="/img/ribbon-vendido.png">'); break;
 					}
 				}
 
 
 
 				innerHTML = '<div class="panel-heading text-center"><h3 class="panel-title">'+ property.ref.toUpperCase() +'</h3></div>';
-				innerHTML += '<a href="'+HOST+'/propiedad/'+ property.id +'" class="mouse-velo-trigger"> </a>';
+				innerHTML += '<a href="/propiedad/'+ property.id +'" class="mouse-velo-trigger"> </a>';
 				innerHTML += '<div class="panel-body panel-body-velo"> </div>';
 				innerHTML += '<div class="panel-body collage"> </div>';
 
