@@ -1,21 +1,25 @@
 $(function(){
-	
+
 	$('.error').siblings('input,textarea').css("border","1px solid red");
 
 	$('.selectpicker').selectpicker();
-
 	$('#barrio option').each(function(){
-		if ($(this).data('ciudad') != 1) $(this).hide();
+        console.log($(this).data('ciudad') != $('#ciudad option:selected').val());
+		if ($(this).data('ciudad') != $('#ciudad option:selected').val()){
+                $(this).hide();
+        } else {
+            $(this).prop("selected",true)
+        }
 	});
-	
+
 	$('#ciudad').change(function(){
-		
+
 		var ciudad_id = $('#ciudad option:selected').val();
 		var i=0;
 		var j = false;
-		
+
 		$('#barrio option').each(function(){
-			
+
 			if ($(this).data('ciudad') != ciudad_id){
 				$(this).hide();
 			} else {
@@ -24,11 +28,11 @@ $(function(){
 				$(this).removeAttr('style');
 			}
 		});
-		
+
 		$('.selectpicker').selectpicker('refresh');
-			
+
 	});
-	
+
 });
 
 
