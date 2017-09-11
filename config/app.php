@@ -147,15 +147,14 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-		
+
 		/*
 		 * Third-party Service Providers
 		 */
-		
+
 		'Intervention\Image\ImageServiceProvider',
-		'Dinesh\Barcode\BarcodeServiceProvider',
 		'Barryvdh\DomPDF\ServiceProvider'
-        
+
 
 	],
 
@@ -207,10 +206,8 @@ return [
 		'Form' 		=> 'Illuminate\Html\FormFacade',
 		'Html' 		=> 'Illuminate\Html\HtmlFacade',
 		'Image' 	=> 'Intervention\Image\Facades\Image',
-		
-		'DNS1D' => 'Dinesh\Barcode\Facades\DNS1DFacade',
-    	'DNS2D' => 'Dinesh\Barcode\Facades\DNS2DFacade',
-    	'PDF' => 'Barryvdh\DomPDF\Facade'
+
+    'PDF' => 'Barryvdh\DomPDF\Facade'
 
 	],
 
