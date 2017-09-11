@@ -10,26 +10,26 @@
 			affix: 'right center'
 		});
 
-	
-	
-		
-		
+
+
+
+
 		$('.image img').fullscreenslides();
-		
-	/*	
+
+	/*
 	$('#submitForm').click(function(e){
-			
+
 			e.preventDefault();
-			
+
 			$.post('http://barg.com.fetux.com/ajax/form-contacto.php',$('#form-contacto').serialize(),function(response){
-				
+
 				$('#form-contacto-response').html(response);
-				
+
 			});
-			
+
 		});
 		*/
-	
+
 </script>
 @endsection
 
@@ -44,15 +44,15 @@
 <div class="page-header">
 	<div class="row">
 		<div class="col-xs-12">
-			
+
 			<h1 class="pull-left">{{strtoupper($property->ref)}}</h1>
-		
+
 			@if ($property->mostrar_precio)
 			<h1 class="pull-right precio">{{ ($property->moneda) ? 'US$' : '$' }} {{number_format($property->precio,0,',','.')}}</h1>
 			@else
 			<h1 class="label pull-right precio" >Consulte precio</h1>
 			@endif
-			
+
 		</div>
 	</div>
 </div>
@@ -77,12 +77,12 @@
 							echo '<img src="'.url('img/ribbon-alquilado.png').'">';
 							break;
 					}
-				?>				
+				?>
 			</div>
-			
+
 			<div id="carousel-property" class="carousel slide" data-ride="carousel">
-				
-			
+
+
 				<?php $i=0 ?>
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
@@ -209,14 +209,14 @@
 			</p>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<div class="col-xs-12 text-center">
 			<a id="print-btn" class="btn btn-barg" href="{{url('propiedad/'.$property->id.'/imprimir')}}" target="_blank">IMPRIMIR</a>
 		</div>
 	</div>
 
-{!! Form::open(array('action'=>'PropertyController@sendContactForm', 'class'=>'form-horizontal')) !!}	
+{!! Form::open(array('action'=>'PropertyController@sendContactForm', 'class'=>'form-horizontal')) !!}
 <!--<form class="form-horizontal" id="form-contacto">-->
 	<div class="row">
 		<div class="col-xs-12 col-md-4">
@@ -224,36 +224,36 @@
 			<!-- <h3 class="text-center"><b>Ubicación</b></h3>-->
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.7677747065636!2d-57.53682500000002!3d-38.02919300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584ddcc013af0d5%3A0x2e0b7a36af942cd5!2s{{str_replace(' ','+',$property->direccion)}}%2C+Mar+del+Plata%2C+Buenos+Aires!5e0!3m2!1sen!2sar!4v1428542480706"></iframe>
 		</div>
-		
+
 		<div class="col-xs-12 col-md-4">
 			<div class="form-group">
 				<div class="input-group col-xs-10 col-xs-offset-1 ">
 					<span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
-					<input name="nombre" type="text" class="form-control" placeholder="Nombre Completo" aria-describedby="basic-addon1">
+					<input name="nombre" type="text" class="form-control" placeholder="Nombre Completo" aria-describedby="basic-addon1" value="{{old('nombre')}}">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="input-group col-xs-10 col-xs-offset-1">
 					<span class="input-group-addon glyphicon glyphicon-envelope" id="basic-addon1"></span>
-					<input name="email" type="email" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
+					<input name="email" type="email" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1" value="{{old('email')}}">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="input-group col-xs-10 col-xs-offset-1">
 					<span class="input-group-addon glyphicon glyphicon-phone" id="basic-addon1"></span>
-					<input name="tel" type="text" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1">
+					<input name="tel" type="text" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1"  value="{{old('tel')}}">
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="col-xs-12 col-md-4">
 			<div class="form-group">
-				<textarea name="msje" class="form-control" rows="5" placeholder="Escriba su consulta por esta Propiedad"></textarea>
+				<textarea name="msje" class="form-control" rows="5" placeholder="Escriba su consulta por esta Propiedad">{{old('msje')}}</textarea>
 			</div>
 		</div>
-		
+
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-md-6 col-md-offset-5">

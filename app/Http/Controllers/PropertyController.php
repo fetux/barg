@@ -632,7 +632,7 @@ class PropertyController extends Controller {
 
 		if ($v->fails())
 	    {
-	        return redirect()->back()->withErrors($v->errors())->withInput();
+	        return redirect()->back()->withErrors($v)->withInput();
 	    }
 
 		$fecha = date("d-M-y H:i");
