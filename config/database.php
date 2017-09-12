@@ -64,6 +64,18 @@ return [
 			'strict'    => false,
 		],
 
+  	'mysql_old' => [
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'barg',
+			'username'  => 'root',
+			'password'  => 'fetux',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'strict'    => false,
+		],
+
 		'pgsql' => [
 			'driver'   => 'pgsql',
 			'host'     => env('DB_HOST', 'localhost'),
