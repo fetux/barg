@@ -299,7 +299,7 @@ class PropertyController extends Controller {
 		$property->save();
 		$property->images()->saveMany($images);
 
-		$property->barcode_url = DNS2D::getBarcodePNGPath("http://www.gerardobarg.com/propiedad/".$property->id, "QRCODE");
+		// $property->barcode_url = DNS2D::getBarcodePNGPath("http://www.gerardobarg.com/propiedad/".$property->id, "QRCODE");
 
 		$property->save(); // To update barcode_url
 

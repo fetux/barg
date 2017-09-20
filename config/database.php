@@ -67,7 +67,7 @@ return [
   	'mysql_old' => [
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'barg',
+			'database'  => 'gerardob_aplicacion',
 			'username'  => 'root',
 			'password'  => 'fetux',
 			'charset'   => 'utf8',

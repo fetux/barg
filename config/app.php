@@ -28,7 +28,8 @@ return [
 
 	//'url' => 'http://localhost/webdev/gerardobarg.com.ar/',
 	//'url' => 'http://www.fetux.com/proyectos/barg.com/',
-	'url' => 'http://barg.com.fetux.com/',
+	// 'url' => 'http://barg.com.fetux.com/',
+  'url' => 'http://vps-1384777-x.dattaweb.com/',
 	//'url' => 'http://barg.local',
 	/*
 	|--------------------------------------------------------------------------
