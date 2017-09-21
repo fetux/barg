@@ -636,8 +636,8 @@ class PropertyController extends Controller {
 	    }
 
 		$fecha = date("d-M-y H:i");
-		//$mymail = "info@gerardobarg.com.ar";
-		$mymail = "fetudaguerre@gmail.com";
+		$mymail = "info@gerardobarg.com.ar";
+		// $mymail = "fetudaguerre@gmail.com";
 		$subject = "Nuevo Contacto desde Barg.com";
 
 
