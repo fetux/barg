@@ -4,3 +4,4 @@
 .settings/
 storage/
 public/uploads/properties-images/*
+.idea/
