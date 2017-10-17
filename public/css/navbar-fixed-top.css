@@ -35,6 +35,10 @@ body {
 	display:inline;
 }
 
+img.img-responsive.col-xs-6 {
+    min-height: 140px;
+}
+
 
 .panel-body-velo{
 	position:absolute;
