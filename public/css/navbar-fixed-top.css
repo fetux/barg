@@ -35,8 +35,8 @@ body {
 	display:inline;
 }
 
-.collage img:first-child, .collage img:second-child {
-	min-height: 140px
+img.img-responsive.col-xs-6 {
+    min-height: 140px;
 }
 
 
