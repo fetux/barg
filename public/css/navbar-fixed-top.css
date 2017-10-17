@@ -35,6 +35,10 @@ body {
 	display:inline;
 }
 
+.collage img:first-child, .collage img:second-child {
+	min-height: 140px
+}
+
 
 .panel-body-velo{
 	position:absolute;
