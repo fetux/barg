@@ -33,14 +33,14 @@ $.fn.cargarPropiedades = function(container,ipp,filters,page){
 
 				col.append(innerHTML);
 
-				if (property.estado.nombre != "Disponible") {
+				if (property.estado.nombre != "DISPONIBLE") {
 					ribbon = col.find('.ribbon');
 
 					switch(property.estado.nombre){
 
-						case "Reservado": ribbon.append('<img src="/img/ribbon-reservado.png">'); break;
-						case "Alquilado": ribbon.append('<img src="/img/ribbon-alquilado.png">'); break;
-						case "Vendido": ribbon.append('<img src="/img/ribbon-vendido.png">'); break;
+						case "RESERVADO": ribbon.append('<img src="/img/ribbon-reservado.png">'); break;
+						case "ALQUILADO": ribbon.append('<img src="/img/ribbon-alquilado.png">'); break;
+						case "VENDIDO": ribbon.append('<img src="/img/ribbon-vendido.png">'); break;
 					}
 				}
 
@@ -222,7 +222,8 @@ $(document).ready(function () {
 	  "partly cloudy" : "parcialmente nublado",
 	  "clear" : "despejado",
 	  "fair" : "estable",
-	  "rain shower": "llovizna"
+	  "rain shower": "llovizna",
+    "sunny": "despejado"
 	};
 
 	$.simpleWeather({
@@ -230,9 +231,11 @@ $(document).ready(function () {
 	    woeid: '466863',
 	    unit: 'c',
 	    success: function(weather) {
+        var text = codes[weather.currently.toLowerCase()];
+        text = (text === undefined) ? 'parcialmente nublado' : text;
 	      html = '<h2><i class="icon-'+weather.code+'"></i> <span>'+weather.temp+'&deg;'+weather.units.temp+'</span></h2>';
 	      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-	      html += '<li class="currently">'+codes[weather.currently.toLowerCase()]+'</li>';
+	      html += '<li class="currently">'+text+'</li>';
 	      //html += '<li class="currently">'+weather.currently+'</li>';
 	      //html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
 	      html += '</ul>';

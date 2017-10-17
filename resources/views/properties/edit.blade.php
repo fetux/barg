@@ -57,7 +57,7 @@
 		</div>
 		  <div class="form-group">
 		    <label for="ciudad" class="control-label">Ciudad</label>
-			    <select class="form-control" id="ciudad" name="ciudad">
+			    <select class="selectpicker form-control" id="ciudad" name="ciudad">
 					@foreach ($cities as $city)
 				    	<option value="{{ $city->id }}" {{ ($property->ciudad_id == $city->id) ? 'selected' : '' }}>{{ $city->nombre }}</option>
 					@endforeach
@@ -65,11 +65,11 @@
 		  </div>
 		  <div class="form-group">
 		    <label for="barrio" class="control-label">Barrio</label>
-		    <select class="form-control" id="barrio" name="barrio">
+		    <select class="selectpicker form-control" id="barrio" name="barrio" data-live-search="true"	data-size="6">
 			  @foreach ($neighborhoods as $neighborhood)
-				    <option value="{{$neighborhood->id}}" data-ciudad="{{$neighborhood->ciudad_id}}" {{ ($property->barrio_id == $neighborhood->id) ? 'selected' : '' }}>{{$neighborhood->nombre}}</option>
+				    <option value="{{$neighborhood->id}}" data-ciudad="{{$neighborhood->ciudad_id}}" {{ old('barrio') == $neighborhood->id ? 'selected="true"' : $property->barrio_id == $neighborhood->id ? 'selected="true"' : '' }}>{{$neighborhood->nombre}}</option>
 			  @endforeach
-              <option value="0" data-ciudad="3">--</option>
+        <option value="0" data-ciudad="3">--</option>
 			  <option value="0" data-ciudad="4">--</option>
 			  <option value="0" data-ciudad="5">--</option>
 			  <option value="0" data-ciudad="6">--</option>

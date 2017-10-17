@@ -8,25 +8,37 @@ $(function(){
 		if ($(this).data('ciudad') != $('#ciudad option:selected').val()){
                 $(this).hide();
         } else {
-            $(this).prop("selected",true)
+            // $(this).prop("selected",true)
+            $(this).show();
         }
 	});
 
+	$('#barrio').change(function(){
+    $('.selectpicker').selectpicker('refresh');
+  });
+  
 	$('#ciudad').change(function(){
+    // $('.selectpicker').selectpicker('refresh');
 
 		var ciudad_id = $('#ciudad option:selected').val();
+    console.log(ciudad_id);
 		var i=0;
 		var j = false;
 
 		$('#barrio option').each(function(){
 
 			if ($(this).data('ciudad') != ciudad_id){
+        $(this).prop("selected", false);
 				$(this).hide();
 			} else {
-				console.log($(this).html());
-				if (i++ == 0) {$(this).prop("selected",true),j=true;}
+        $(this).show();
+        if (i++==0) {$(this).prop("selected", true);}
+				// console.log($(this).html());
 				$(this).removeAttr('style');
 			}
+
+
+
 		});
 
 		$('.selectpicker').selectpicker('refresh');
