@@ -34,7 +34,7 @@ body {
 	padding: 5px;
 	display:inline;
 }
- 
+
 
 .panel-body-velo{
 	position:absolute;
@@ -49,9 +49,8 @@ body {
 
 .panel-body-velo h5, .panel-body-velo p{
 	color: white;
-	
-}
 
+}
 
 .mouse-velo-trigger{
 	position:absolute;

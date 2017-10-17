@@ -230,20 +230,17 @@ class PropertyController extends Controller {
 	        'mostrar_precio' => 'required',
 	        'destacada' => 'required|max:45',
 
-	        'carteleraT' => 'required|max:28',
-	        'cartelera1' => 'required|max:90',
-	        'cartelera2' => 'required|max:90',
-	        'cartelera3' => 'required|max:90',
-	        'cartelera4' => 'required|max:90',
+	        'carteleraT' => 'max:28',
+	        'cartelera1' => 'max:90',
+	        'cartelera2' => 'max:90',
+	        'cartelera3' => 'max:90',
+	        'cartelera4' => 'max:90',
 
 
 			'nombre_duenio' => 'required',
 			'provincia_duenio' => 'required',
 			'ciudad_duenio' => 'required',
-			'direccion_duenio' => 'required',
 			'codpostal_duenio' => 'required',
-			'tel1_duenio' => 'required',
-			'tel2_duenio' => 'required',
 	    ],$messages);
 
 		if ($v->fails())
@@ -411,19 +408,16 @@ class PropertyController extends Controller {
 		        'mostrar_precio' => 'required',
 		        'destacada' => 'required',
 
-		        'carteleraT' => 'required|max:28',
-		        'cartelera1' => 'required|max:90',
-		        'cartelera2' => 'required|max:90',
-		        'cartelera3' => 'required|max:90',
-		        'cartelera4' => 'required|max:90',
+		        'carteleraT' => 'max:28',
+		        'cartelera1' => 'max:90',
+		        'cartelera2' => 'max:90',
+		        'cartelera3' => 'max:90',
+		        'cartelera4' => 'max:90',
 
 				'nombre_duenio' => 'required',
 				'provincia_duenio' => 'required',
 				'ciudad_duenio' => 'required',
-				'direccion_duenio' => 'required',
 				'codpostal_duenio' => 'required',
-				'tel1_duenio' => 'required',
-				'tel2_duenio' => 'required',
 		    ],$messages);
 
 			if ($v->fails())
@@ -636,8 +630,7 @@ class PropertyController extends Controller {
 	    }
 
 		$fecha = date("d-M-y H:i");
-		//$mymail = "info@gerardobarg.com.ar";
-		$mymail = "fetudaguerre@gmail.com";
+		  $mymail = "info@gerardobarg.com.ar";
 		$subject = "Nuevo Contacto desde Barg.com";
 
 

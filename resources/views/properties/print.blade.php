@@ -9,66 +9,48 @@
 		    <meta name="description" content="">
 		    <meta name="author" content="">
 		    <link rel="icon" href="http://www.gerardobarg.com.ar/favicon.ico">
-		
+
 		    <title>Inmobiliaria Gerardo E. Barg</title>
-		
-		   
-		    
-		    
-		   	
+
+
+
+
+
 		   	@if (Auth::check())
 			    <link href="{{asset('css/properties/printadmin.css')}}" rel="stylesheet" media="all">
 			@else
 			    <!-- Bootstrap core CSS -->
-                <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet"> 
+                <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
 				<link href="{{asset('css/properties/print.css')}}" rel="stylesheet" media="all">
 			@endif
 			<link href="{{asset('css/properties/printprop.css')}}" rel="stylesheet" media="all">
-		     
+
 	</head>
 	<body>
 		<div class="container-fluid">
 		@if (Auth::check())
-		  <h1>{{$property->carteleraT}}</h1>
-		  <img class="separador" src="{{ asset('img/lineas.png') }}">
-		  <br />
-		  <table align="center">
-		      <thead>
-		         
-		      </thead>
-		      <tbody>
-    		      <tr>
-		              <td colspan="2" rowspan="4" valign="top"><img height="330" width="500" class="foto" src="{{ url($property->images[0]->url) }}"/></td>
-		              <td rowspan="2" valign="top"><img height="150" width="150" class="foto min" src="{{ url($property->images[1]->url) }}"/></td>
-		              <td><p style="text-align: center"><strong>{{$property->cartelera1}} lorem impsum</strong></p></td>
-		          </tr>
-		          <tr>
-		              <td><p style="text-align: center; margin"><strong>{{$property->cartelera2}} lorem impsum</strong></p></td>
-		          </tr>
-		          <tr>
-		              <td rowspan="2" valign="top"><img height="150" width="150" class="foto min" src="{{ url($property->images[2]->url) }}"/></td>
-		              <td><p style="text-align: center"><strong>{{$property->cartelera3}}</strong></p></td>
-		          </tr>
-		          <tr>
-		              <td>
-		                  <p style="text-align: center"><strong>{{$property->cartelera4}}</strong></p>
-		                  <p style="color:red; text-align:center"class="precio text-center red">Valor {{($property->moneda == 1) ? 'US$':'$'}} <span>{{number_format($property->precio,0,',','.')}}</span></p>
-		              </td>
-		          </tr>
-		          <tr>
-		              <td align="left">
-		                  <img class="qr" src="{{ url($property->barcode_url)}}" height="130"/>
-		              </td>
-		              <td align="right">
-		                  <img style="margin-right: 15px;" src="https://maps.googleapis.com/maps/api/staticmap?zoom=16&size=300x150&maptype=roadmap&markers=color:red%7C{{str_replace(' ','%20',$property->direccion)}}%20Mar%20del%20Plata%20Buenos%20Aires&key=AIzaSyAOzBt0WZNxFn4mk9OVw8zkY2Gi1IU2XJY" />
-		              </td>
-		              <td colspan="2" align="center">
-		                  <img style="margin-top:30px" src="{{ asset('img/logo-barg.png') }}" height="100"/>
-		              </td>
-		          </tr>
-		      </tbody>
-		  </table>
-		            
+      <header>
+  		  <h1>{{$property->carteleraT}}</h1>
+  		  <img id="banner" src="{{ asset('img/lineas.png') }}">
+      </header>
+
+      <main>
+        <div class="content left">
+
+        </div>
+        <div  class="content right">
+
+        </div>
+      </main
+
+
+
+
+      <footer>
+        <img id="qr" src="{{ url($property->barcode_url)}}"/>
+        <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?zoom=16&size=300x150&maptype=roadmap&markers=color:red%7C{{str_replace(' ','%20',$property->direccion)}}%20Mar%20del%20Plata%20Buenos%20Aires&key=AIzaSyAOzBt0WZNxFn4mk9OVw8zkY2Gi1IU2XJY" />
+        <img id="logo" src="{{ asset('img/logo-barg.png') }}"/>
+		  </footer>
 		@else
 			<div class="row">
 				<div class="col-xs-12">
@@ -78,12 +60,12 @@
 					@else
 						<h1 class="label pull-right precio">Consulte precio</h1>
 					@endif
-				</div>					
+				</div>
 			</div>
 			<div class="row">
 				<div class"col-xs-12">
-					<img class="separador" src="{{ asset('img/lineas.png') }}">	
-				</div>			
+					<img class="separador" src="{{ asset('img/lineas.png') }}">
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
@@ -105,7 +87,7 @@
 							<img class="img-responsive foto" src="{{ url($property->images[2]->url) }}"/>
 						</div>
 					</div>
-				
+
 				</div>
 			</div>
 			<div class="row">
@@ -129,6 +111,6 @@
 			</div>
 		@endif
 	</div><!--end container -->
-	</body>    
+	</body>
 </html>
 
