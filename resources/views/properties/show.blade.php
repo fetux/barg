@@ -67,13 +67,13 @@
 						case "Disponible" :
 							//echo '<span class="estado label label-success pull-right">Disponible</span>';
 							break;
-						case "Reservado" :
+						case "RESERVADO" :
 							echo '<img src="'.url('img/ribbon-reservado.png').'">';
 							break;
-						case "Alquilado" :
+						case "ALQUILADO" :
 							echo '<img src="'.url('img/ribbon-alquilado.png').'">';
 							break;
-						case "Vendido" :
+						case "VENDIDO" :
 							echo '<img src="'.url('img/ribbon-alquilado.png').'">';
 							break;
 					}
@@ -127,6 +127,12 @@
 
 							</thead>
 							<tbody>
+								<tr>
+									<th>Localidad</th><td>{{$property->ciudad->nombre}}</td>
+								</tr>
+								<tr>
+									<th>Barrio</th><td>{{$property->barrio->nombre}}</td>
+								</tr>
 								<tr>
 									<th>Direcci&oacute;n</th><td>{{$property->direccion}}</td>
 								</tr>

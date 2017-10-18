@@ -36,12 +36,14 @@
 
       <main>
         <div class="content left">
-
+          <img class="foto" src="{{ url($property->images[0]->url) }}"/>
+          <img class="foto" src="{{ url($property->images[0]->url) }}"/>
+          <img class="foto" src="{{ url($property->images[0]->url) }}"/>
         </div>
         <div  class="content right">
-
+          <p>{{ $property->descripcion }}</p>
         </div>
-      </main
+      </main>
 
 
 

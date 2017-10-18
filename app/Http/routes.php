@@ -23,8 +23,8 @@ Route::post('/subscribir','PropertyController@subscribe');
 
 
 
-Route::get('/subscriptores/{type?}/{ipp?}', ['middleware' => 'auth', 'uses' =>'PropertyController@viewSubscribers']);
-Route::get('/subscriptores.csv/{type?}', ['middleware' => 'auth', 'uses' => 'PropertyController@downloadSubscribers']);
+Route::get('/suscriptores/{type?}/{ipp?}', ['middleware' => 'auth', 'uses' =>'PropertyController@viewSubscribers']);
+Route::get('/suscriptores.csv/{type?}', ['middleware' => 'auth', 'uses' => 'PropertyController@downloadSubscribers']);
 
 Route::get('/usuarios', ['middleware' => 'auth', 'uses' =>'UserController@index']);
 //Route::post('usuarios/{u}/eliminar', ['middleware' => 'auth', 'uses' => 'UserController@remove']);

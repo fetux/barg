@@ -11,19 +11,19 @@
 @section('content')
 <div class="row">
 	<div class="col-xs-12">
-		<h1 class="pull-left">Listado de Subscriptores</h1>		
+		<h1 class="pull-left">Listado de Suscriptores</h1>		
 	</div>
 </div>
 <div class="row">
-	<a class="btn btn-default pull-left" href="{{url('subscriptores')}}">Todos</a>
-	<a class="btn btn-default pull-left" href="{{url('subscriptores/0')}}">General</a>
-	<a class="btn btn-default pull-left" href="{{url('subscriptores/1')}}">Alquileres</a>
-	<a class="btn btn-default pull-left" href="{{url('/subscriptores/2')}}">Ventas</a>
-	<a class="btn btn-default pull-right" href="{{url('subscriptores.csv')}}<?=str_replace('subscriptores', '', Request::path());?>">Descargar CSV</a>	
+	<a class="btn btn-default pull-left" href="{{url('suscriptores')}}">Todos</a>
+	<a class="btn btn-default pull-left" href="{{url('suscriptores/0')}}">General</a>
+	<a class="btn btn-default pull-left" href="{{url('suscriptores/1')}}">Alquileres</a>
+	<a class="btn btn-default pull-left" href="{{url('/suscriptores/2')}}">Ventas</a>
+	<a class="btn btn-default pull-right" href="{{url('suscriptores.csv')}}<?=str_replace('suscriptores', '', Request::path());?>">Descargar CSV</a>	
 </div>
 
 
-<table id="subscriptores" class="table table-striped table-hover table-responsive">
+<table id="suscriptores" class="table table-striped table-hover table-responsive">
 	<thead>
 		<tr>
 			<th>ID</th><th>Direcci&oacute;n de correo electr&oacute;nico</th><th>Newsletter</th><th>Fecha de subscripci&oacute;n</th>

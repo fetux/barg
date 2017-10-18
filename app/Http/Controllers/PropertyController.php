@@ -82,7 +82,7 @@ class PropertyController extends Controller {
 
 		$provinces = Province::all();
 		$cities = City::all();
-		$neighborhoods = Neighborhood::all();
+		$neighborhoods = Neighborhood::orderBy('nombre')->get();
 		/*
 		try{
 			$client = new \SoapClient("http://gisdesa.mardelplata.gob.ar/opendata/ws.php?wsdl");
@@ -344,7 +344,7 @@ class PropertyController extends Controller {
 
 			$provinces = Province::all();
 			$cities = City::all();
-			$neighborhoods = Neighborhood::all();
+			$neighborhoods = Neighborhood::orderBy('nombre')->get();
 			/*
 			try{
 				$client = new \SoapClient("http://gisdesa.mardelplata.gob.ar/opendata/ws.php?wsdl");

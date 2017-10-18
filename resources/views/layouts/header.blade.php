@@ -35,7 +35,7 @@
           			<li><a href="{{url('propiedad/crear')}}"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Nueva Propiedad</a></li>
 					@if (Auth::user()->getLevel() == 0)          			
           			<li class="divider"></li>
-          			<li><a href="{{url('subscriptores')}}"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Subscriptores</a></li>
+          			<li><a href="{{url('suscriptores')}}"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Suscriptores</a></li>
           			<li><a href="{{url('/usuarios')}}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Usuarios</a></li>
           			@endif
           			<li class="divider"></li>
@@ -103,7 +103,7 @@
 		          			<li><a href="{{url('propiedad/crear')}}"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Nueva Propiedad</a></li>
 							@if (Auth::user()->getLevel() == 0)          			
 		          			<li class="divider"></li>
-		          			<li><a href="{{url('subscriptores')}}"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Subscriptores</a></li>
+		          			<li><a href="{{url('suscriptores')}}"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Suscriptores</a></li>
 		          			<li><a href="{{url('/usuarios')}}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Usuarios</a></li>
 		          			@endif
 		          			<li class="divider"></li>
