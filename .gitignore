@@ -4,4 +4,5 @@
 .settings/
 storage/
 public/uploads/properties-images/*
+public/uploads/properties-qr/*
 .idea/

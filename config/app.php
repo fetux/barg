@@ -154,7 +154,8 @@ return [
 		 */
 
 		'Intervention\Image\ImageServiceProvider',
-		'Barryvdh\DomPDF\ServiceProvider'
+		'Barryvdh\DomPDF\ServiceProvider',
+    'SimpleSoftwareIO\QrCode\QrCodeServiceProvider'
 
 
 	],
@@ -208,7 +209,8 @@ return [
 		'Html' 		=> 'Illuminate\Html\HtmlFacade',
 		'Image' 	=> 'Intervention\Image\Facades\Image',
 
-    'PDF' => 'Barryvdh\DomPDF\Facade'
+    'PDF' => 'Barryvdh\DomPDF\Facade',
+    'QrCode' => 'SimpleSoftwareIO\QrCode\Facades\QrCode'
 
 	],
 

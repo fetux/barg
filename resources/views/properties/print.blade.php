@@ -45,9 +45,6 @@
         </div>
       </main>
 
-
-
-
       <footer>
         <img id="qr" src="{{ url($property->barcode_url)}}"/>
         <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?zoom=16&size=300x150&maptype=roadmap&markers=color:red%7C{{str_replace(' ','%20',$property->direccion)}}%20Mar%20del%20Plata%20Buenos%20Aires&key=AIzaSyAOzBt0WZNxFn4mk9OVw8zkY2Gi1IU2XJY" />

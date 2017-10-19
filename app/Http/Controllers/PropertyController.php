@@ -10,6 +10,7 @@ use Intervention\Image\Facades\Image;
 use DNS2D;
 use PDF;
 use Auth;
+use QrCode;
 
 use App\Property;
 use App\Province;
@@ -59,6 +60,15 @@ class PropertyController extends Controller {
 		if($p!=NULL)
         {
             $property = Property::find($p);
+            if ($property->barcode_url == NULL) {
+              $destinationPath = 'uploads/properties-qr/'.str_replace('/', '-', str_replace(' ', '-',$property->ref));
+              mkdir(public_path($destinationPath));
+              QrCode::format('png')->size(150)->generate("http://www.gerardobarg.com/propiedad/".$property->id, $destinationPath.'/QrCode.png', 'image/png');
+          		$property->barcode_url = $destinationPath.'/QrCode.png';
+
+          		$property->save(); // To update barcode_url
+
+            }
             //if (Auth::check())
             //    return PDF::loadView('properties.print', compact('property'))->setPaper('a4')->setOrientation('landscape')->stream('salida.pdf');
 
@@ -296,7 +306,10 @@ class PropertyController extends Controller {
 		$property->save();
 		$property->images()->saveMany($images);
 
-		// $property->barcode_url = DNS2D::getBarcodePNGPath("http://www.gerardobarg.com/propiedad/".$property->id, "QRCODE");
+    $destinationPath = 'uploads/properties-qr/'.str_replace('/', '-', str_replace(' ', '-',$property->ref));
+    mkdir(public_path($destinationPath));
+    QrCode::format('png')->size(150)->generate("http://www.gerardobarg.com/propiedad/".$property->id, $destinationPath.'/QrCode.png', 'image/png');
+		$property->barcode_url = $destinationPath.'/QrCode.png';
 
 		$property->save(); // To update barcode_url
 

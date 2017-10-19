@@ -46,7 +46,12 @@ footer {
   margin
 }
 
+footer #map {
+  position: relative;
+  left: 100px;
+}
+
 footer #logo {
-  height: 150px;
+  height: 120px;
   float: right;
 }
