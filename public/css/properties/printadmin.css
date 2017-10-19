@@ -35,7 +35,18 @@ main .content.left img:first-child {
 
 main .content.right {
   width: 423px;
+  height: 346px;
   float: right;
+  position: relative;
+}
+
+main .content.right h1{
+  position: absolute;;
+  float: right;
+  right: 10px;
+  bottom: 0;
+  color: red;
+  font-weight: bold;
 }
 
 footer {

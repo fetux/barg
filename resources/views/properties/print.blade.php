@@ -41,7 +41,12 @@
           <img class="foto" src="{{ url($property->images[0]->url) }}"/>
         </div>
         <div  class="content right">
-          <p>{{ $property->descripcion }}</p>
+          <p>{{ $property->carteleraT }}</p>
+          <p>{{ $property->cartelera1 }}</p>
+          <p>{{ $property->cartelera2 }}</p>
+          <p>{{ $property->cartelera3 }}</p>
+          <p>{{ $property->cartelera4 }}</p>
+          <h1>{{ ($property->moneda) ? 'US$' : '$' }} {{$property->precio}}</h1>
         </div>
       </main>
 
