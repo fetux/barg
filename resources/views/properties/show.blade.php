@@ -88,7 +88,7 @@
 				<div class="carousel-inner" role="listbox">
 					@foreach ($property->images as $image)
 					<div class="item <?= ($i++ == 0) ? 'active' : '' ?> image">
-						<a href="{{url($image->slide_url)}}" rel="gallery">
+						<a href="{{url($image->url)}}" rel="gallery">
 							<img src="{{url($image->slide_url)}}" width="550" height="300">
 						</a>
 					</div>
